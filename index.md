@@ -56,6 +56,9 @@ cd simulation-lignes-de-champs
 make main
 ./main $Nombre_de_charge_positives $Nombre_de_charge_négatives $Nombre_de_ligne_de_champs
 ```
+### En voir plus
+
+[Cliquer ici pour voir la répertoire sur github](https://github.com/ArianDervishaj/simulation-lignes-de-champs)
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 

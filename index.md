@@ -13,7 +13,7 @@ La simulation prend en compte les interactions gravitationnelles entre les plan�
 
 ### Screenshots
 
-![Image du système solaire](image.png)
+![Image du système solaire](/assets/systeme-solaire/image.png)
 
 ### Exécuter le programme
 

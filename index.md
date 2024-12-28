@@ -41,6 +41,17 @@ Ce programme simule les lignes de champs électriques en utilisant le langage C.
 
 ### Screenshots
 
+#### Simulation avec 10 charges positives, 10 charges négatives et 50 lignes de champs
+
+![Simulation avec 10 charges positives, 10 charges négatives et 50 lignes de champs](/assets/lignes-de-champs/image.png)
+
+#### Simulation avec 100 charges positives, 100 charges négatives et 5000 lignes de champs
+
+![Simulation avec 100 charges positives, 100 charges négatives et 5000 lignes de champst](/assets/lignes-de-champs/image-1.png)
+
+#### Simulation avec 5 charges positives, 10 charges négatives et 500 lignes de champs
+
+![Simulation avec 5 charges positives, 10 charges négatives et 500 lignes de champs](/assets/lignes-de-champs/image-2.png)
 ### Exécuter le programme
 
 1. Avoir un environnement de développement C configuré.

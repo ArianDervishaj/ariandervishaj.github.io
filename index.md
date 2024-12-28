@@ -35,7 +35,7 @@ make main
 
 [Cliquer ici pour voir la répertoire sur github](https://github.com/ArianDervishaj/simulation-systeme-solaire)
 
-## Simulation de lignes de champs électriques
+## Simulation de lignes de champs électriques en C
 
 Ce programme simule les lignes de champs électriques en utilisant le langage C. Il prend en compte les charges électriques et calcule les champs électriques résultants, puis trace les lignes de champs correspondantes. La simulation permet de visualiser le comportement du champ électrique en présence de multiples particules chargées.
 

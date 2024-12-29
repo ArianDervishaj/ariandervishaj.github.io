@@ -9,11 +9,15 @@ layout: default
 Ce programme simule les lignes de champs électriques en utilisant le langage C.  
 Il calcule les champs électriques générés par des charges positives et négatives et trace leurs lignes de champ correspondantes. Cette simulation permet de visualiser le comportement du champ électrique dans des configurations complexes.
 
+---
+
 ### Fonctionnalités
 
 - Prise en charge de charges positives et négatives.
 - Calcul dynamique des champs électriques résultants.
 - Génération graphique des lignes de champs.
+
+---
 
 ### Screenshots
 
@@ -28,6 +32,8 @@ Il calcule les champs électriques générés par des charges positives et néga
 #### Simulation avec 5 charges positives, 10 charges négatives et 500 lignes de champs
 
 ![Simulation avec 5 charges positives, 10 charges négatives et 500 lignes de champs](/assets/lignes-de-champs/image-2.png)
+
+---
 
 ### Exécuter le programme
 
@@ -45,7 +51,9 @@ Pour lancer la simulation, suivez les étapes ci-dessous :
     make main
     ./main <nombre_de_charges_positives> <nombre_de_charges_négatives> <nombre_de_lignes_de_champ>
     ```
-    
+
+---
+
 ### En voir plus
 
 [Voir le dépôt GitHub](https://github.com/ArianDervishaj/simulation-lignes-de-champs)

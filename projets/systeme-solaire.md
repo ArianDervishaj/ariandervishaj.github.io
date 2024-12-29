@@ -11,17 +11,23 @@ Il applique les lois de Newton pour simuler un système planétaire, permettant 
 
 Cette simulation met en pratique des concepts de physique et de programmation pour visualiser les dynamiques orbitales de manière réaliste.
 
+---
+
 ### Fonctionnalités
 
 - Simulation en temps réel des orbites planétaires.
 - Calcul précis des interactions gravitationnelles selon les lois de Newton.
 - Visualisation graphique simple et efficace.
 
+---
+
 ### Screenshots
 
 Voici une capture d'écran illustrant la simulation en action :
 
 ![Image du système solaire](/assets/systeme-solaire/image.png)
+
+---
 
 ### Exécuter le programme
 
@@ -38,6 +44,8 @@ Pour lancer la simulation, suivez les étapes ci-dessous :
     make main
     ./main
     ```
+
+---
 
 ### En savoir plus
 

@@ -20,8 +20,6 @@ layout: default
 - **Outils** : Git, Docker
 - **Domaines** : Réseaux (bases et configurations), Programmation orientée objet et concurrente
 
----
-
 ## Soft Skills
 
 - **Langues parlées** : Français (natif), Anglais (B2/C1), Albanais (natif)

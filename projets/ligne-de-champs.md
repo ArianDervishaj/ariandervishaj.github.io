@@ -3,7 +3,7 @@ title: Simulation de lignes de champs électriques en C
 description:
 layout: default
 ---
-[Back](/index.md)
+[Back](/)
 
 Ce programme simule les lignes de champs électriques en utilisant le langage C. Il prend en compte les charges électriques et calcule les champs électriques résultants, puis trace les lignes de champs correspondantes. La simulation permet de visualiser le comportement du champ électrique en présence de multiples particules chargées.
 

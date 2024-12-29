@@ -5,10 +5,12 @@ layout: default
 
 # Projets
 
-| Nom du projet                               | Compétences                              | Liens |
-|:--------------------------------------------|:-----------------------------------------|:------|
-| Simulation d'un Système Solaire             | C, Lois de Newton                        | [Voir le projet](./projets/systeme-solaire.md)  |
-| Simulation de lignes de champs électriques  | C, Électromagnétisme                     | [Voir le projet](./projets/ligne-de-champs.md)  |
+| Nom du projet                               | Compétences                              | Description                                      | Liens |
+|:--------------------------------------------|:-----------------------------------------|:------------------------------------------------|:------|
+| Simulation d'un Système Solaire             | C, Lois de Newton                        | Simulation graphique des orbites planétaires    | [Voir le projet](./projets/systeme-solaire.md)  |
+| Simulation de lignes de champs électriques  | C, Électromagnétisme                     | Visualisation des champs électriques | [Voir le projet](./projets/ligne-de-champs.md)  |
+| Nuggets Of Wisdom                           | Javascript, React.js, Next.js, Panzoom   | Plateforme web pour afficher des notes de cours SVG | [Voir le projet](./projets/nuggets-of-wisdom.md)  |
+
 
 ---
 

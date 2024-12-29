@@ -1,10 +1,10 @@
 ---
-title: Arian Dervishaj
+title: Simulation d'un Système Solaire en C
 description:
 layout: default
 ---
 
-## Simulation d'un Système Solaire en C
+[Back](/index.md)
 
 Ce projet a été réalisé dans le cadre du cours de physique de l'HEPIA.
 Notre objectif était de mettre en pratique les concepts de physique, notamment les lois de Newton, à travers la simulation d'un système planétaire.

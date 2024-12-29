@@ -29,17 +29,15 @@ Pour lancer la simulation, suivez les étapes ci-dessous :
 
 1. **Pré-requis** : Assurez-vous d'avoir un compilateur C (comme `gcc`) et `make` installés.
 2. **Cloner le dépôt** :
-
-```bash
-git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
-```
+    ```bash
+    git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
+    ```
 3. **Compiler et éxecuter** :
-
-```bash
-cd simulation-systeme-solaire
-make main
-./main
-```
+    ```bash
+    cd simulation-systeme-solaire
+    make main
+    ./main
+    ```
 
 ### En savoir plus
 

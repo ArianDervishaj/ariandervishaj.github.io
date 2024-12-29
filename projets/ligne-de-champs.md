@@ -35,17 +35,17 @@ Pour lancer la simulation, suivez les étapes ci-dessous :
 
 1. **Pré-requis** : Assurez-vous d'avoir un compilateur C (comme `gcc`) et `make` installés.
 2. **Cloner le dépôt** :
-
-```bash
-git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
-```
+    ```bash
+    git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
+    ```
 3. **Compiler et éxecuter** :
 
-```bash
-cd simulation-lignes-de-champs
-make main
-./main <nombre_de_charges_positives> <nombre_de_charges_négatives> <nombre_de_lignes_de_champ>
-```
+    ```bash
+    cd simulation-lignes-de-champs
+    make main
+    ./main <nombre_de_charges_positives> <nombre_de_charges_négatives> <nombre_de_lignes_de_champ>
+    ```
+    
 ### En voir plus
 
 [Voir le dépôt GitHub](https://github.com/ArianDervishaj/simulation-lignes-de-champs)

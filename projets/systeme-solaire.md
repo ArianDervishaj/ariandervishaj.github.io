@@ -4,7 +4,7 @@ description:
 layout: default
 ---
 
-[Back](/index.md)
+[Back](/)
 
 Ce projet a été réalisé dans le cadre du cours de physique de l'HEPIA.
 Notre objectif était de mettre en pratique les concepts de physique, notamment les lois de Newton, à travers la simulation d'un système planétaire.

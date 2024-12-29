@@ -17,7 +17,7 @@ layout: default
 
 | Nom du TP           | Compétences   | Description                                   | Liens                         |
 |:--------------------|:--------------|:----------------------------------------------|:------------------------------|
-| TP - Certifications | Sécurité, TLS, Certificats | Création et gestion de certificats pour HTTPS | [Voir le TP](./labos/cert.md) |
+| Certifications | Sécurité, TLS, Certificats | Création et gestion de certificats pour HTTPS | [Voir le TP](./labos/cert.md) |
 
 ---
 

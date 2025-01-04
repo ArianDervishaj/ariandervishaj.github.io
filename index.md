@@ -15,10 +15,11 @@ layout: default
 
 # Travaux Pratiques
 
-| Nom du TP           | Compétences   | Description                                   | Liens                         |
-|:--------------------|:--------------|:----------------------------------------------|:------------------------------|
-| Certifications | Sécurité, TLS, Certificats | Création et gestion de certificats pour HTTPS | [Voir le TP](./labos/cert.md) |
-| Attaque Macflood     | Réseaux, Sécurité, Switches | Simulation d'une attaque par saturation de la table CAM d'un switch et implémentation de mécanismes de défense (Port Security). | [Voir le TP](./labos/macflood.md)    |
+| Nom du TP        | Compétences       | Description                                    | Liens                             |
+|:-----------------|:------------------|:-----------------------------------------------|:----------------------------------|
+| Certifications   | Sécurité, TLS     | Création et gestion de certificats pour HTTPS  | [Voir le TP](./labos/cert.md)     |
+| Attaque Macflood | Réseaux, Sécurité | Attaque Macflood et défense avec Port Security | [Voir le TP](./labos/macflood.md) |
+
 ---
 
 # Compétences

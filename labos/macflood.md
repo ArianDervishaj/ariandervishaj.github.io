@@ -32,6 +32,7 @@ address 10.0.0.5
 netmask 255.255.255.0
 hwaddress ether 00:00:00:00:00:05
 ```
+
 ##### Explications
 - Configure l'interface `mgmt0` pour utiliser un client DHCP. `auto mgmt0` garantit que l'interface est activée automatiquement au démarrage.
 - La ligne `iface mgmt0 inet dhcp` indique que l'adresse IP sera attribuée dynamiquement par un serveur DHCP.
@@ -39,6 +40,7 @@ hwaddress ether 00:00:00:00:00:05
 - `iface eth0 inet static` indique que les paramètres IP sont définis manuellement.
 - L'adresse IP `10.0.0.5` est attribuée avec un masque de sous-réseau `255.255.255.0` (c'est-à-dire un préfixe /24).
 - La ligne `hwaddress ether 00:00:00:00:00:05` modifie l'adresse MAC de l'interface `eth0` pour `00:00:00:00:00:05`.
+
 #### Hostname `/etc/hostname`
 
 Le fichier /etc/hostname définit le nom d'hôte permanent de la machine, utilisé
@@ -48,6 +50,7 @@ configure ici à H5 pour cette machine.
 ```c
 H5
 ```
+
 #### Installation `Macof` :
 
 ```shell
@@ -59,9 +62,11 @@ git clone https://github.com/WhiteWinterWolf/macof.py.git
 cd macof.py
 chmod 755 macof.py && cp macof.py /usr/local/bin/
 ```
+
 ### Config pour H6,H7 et H4 (Victimes)
 
 Pour les hôtes H6, H7 et H4, on reproduit les mêmes étapes de configuration que pour H5, mais avec quelques différences. Ces hôtes n'ont pas besoin d'une interface `mgmt0` ni d'accès à Internet. La configuration est simplifiée en ne configurant que l'interface `eth0`.
+
 #### Config `/etc/network/interfaces`
 
 Modifier le fichier `/etc/network/interfaces` pour s'assurer que l'hôte conserve sa configuration après un redémarrage.
@@ -76,7 +81,9 @@ iface eth0 inet static
 ```
 
 ---
+
 ## Fonctionnement normal d'un switch
+
 ### Théorie
 
 Lorsqu’un réseau est configuré pour la première fois, les tables CAM (Content Addressable Memory) des switchs sont vides. Les switchs entrent alors en **mode learning** pour construire leur table d’adresses MAC. 
@@ -91,7 +98,9 @@ Lorsqu’un réseau est configuré pour la première fois, les tables CAM (Conte
 3. **Optimisation du Trafic** :
     - Une fois les tables CAM remplies grâce aux trames ARP et au trafic réseau, les switchs peuvent rediriger efficacement les trames **unicast** uniquement vers le port correspondant à l’adresse MAC de destination.
     - Le flooding devient rare, car la majorité des adresses MAC sont déjà apprises
+
 ### Mise en pratique
+
 #### Montrer la CAM table de S2 avant toute action
 
 Pour observer l’état initial de la table CAM sur S2, utilisez la commande suivante :
@@ -127,7 +136,9 @@ Sur le lien entre S2 et H6, on observe les deux échanges nécessaires pour le p
 Sur le lien entre S2 et H7, aucune nouvelle requête n’est envoyée, confirmant que le switch n’a plus besoin de diffuser les paquets grâce à sa table CAM remplie.
 
 ---
+
 ## Macflooding
+
 ### Théorie
 
 Le **MAC flooding** est une attaque réseau visant les commutateurs (switchs). Elle exploite une vulnérabilité liée à la gestion des **tables CAM** (Content Addressable Memory), utilisées par les switchs pour acheminer les trames réseau de manière efficace.
@@ -145,7 +156,9 @@ L’objectif de l’attaque est de **saturer la table CAM** du switch, ce qui pe
     - Cela permet à l’attaquant de :
         - **Intercepter le trafic réseau** destiné aux autres appareils.
         - **Créer de la congestion réseau**, ralentissant les communications.
+
 ### Mise en place de l'attaque
+
 #### Lancer une attaque macflood depuis H1 en expliquant la commande et analyser
 
 Sur H5 : Lancer `macof.py -i eth0 -c 8192 -w 1` 
@@ -172,19 +185,25 @@ Pendant que `macof` tourne sur H5, effectuez un ping depuis H6 vers H7 :
 
 - Les requêtes **Request** et les réponses **Reply** du ping sont diffusées en broadcast sur tous les ports de la topologie.
 - Même le lien entre H5 et S2, qui n'est pas censé recevoir ces paquets, est affecté.
+
 ## Mise en place de la mitigation
+
 ### Ports security + logs
 
 Pour protéger un réseau contre les attaques par MAC flooding, la fonctionnalité **Port Security** des switchs permet de limiter le nombre d'adresses MAC apprises sur un port et de définir des actions en cas de violation. L’ajout de logs permet de surveiller et détecter les tentatives d’attaque.
+
 #### Actions possibles 
+
 | **Mode**   | **Description**                                                                       |
 |------------|---------------------------------------------------------------------------------------|
 | `protect`  | Bloque les trames des adresses MAC non autorisées, sans log ni désactivation du port. |
 | `restrict` | Bloque les trames des adresses non autorisées et génère des logs.                     |
 | `shutdown` | Désactive complètement le port en cas de violation.                                   |
+
 ### Mise en place
 
 ![topo 2](/assets/macflood/topo_2.png)
+
 #### Activer port-security sur le port de H1 :
 
 Sur S1 :
@@ -212,6 +231,7 @@ end
 	Configure la récupération automatique des ports mis en état **err-disabled** suite à une violation de Port Security. Le port est réactivé automatiquement après **60 secondes**.
 - `logging console 7` : 
 	Active le logging détaillé (**niveau 7 : Debugging**) pour afficher toutes les informations et événements sur la console, y compris les violations Port Security et d'autres messages système.
+
 #### Montrer que port-security est bien configuré :
 
 ```c
@@ -225,11 +245,13 @@ show port-security interface GigabitEthernet 0/1
 ```
 
 ![a](/assets/macflood/20250103222354.png)
+
 #### Lancer une attaque par macflooding depuis H1
 
 ```c
 macof.py -i eth0 -c 1000 -w 1
 ```
+
 #### Montrer que Gi0/1 est bien shutdown
 
 ```c
@@ -237,6 +259,7 @@ show interfaces status
 ```
 
 ![a](/assets/macflood/20250103222507.png)
+
 #### Montrer les logs au bout d'1 minute
 
 ```c

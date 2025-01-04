@@ -1,4 +1,17 @@
-# Attaque par Macflood
+---
+title: TP - Attaque Macflood
+description: Mise en place d'une attaque Macflood pour saturer la table CAM d'un switch et implémentation de solutions de mitigation avec Port Security.
+layout: default
+---
+
+[Retour à l'accueil](/)
+
+# TP - Attaque Macflood
+
+Ce projet explore la mise en œuvre d'une attaque Macflood visant à saturer la table CAM d'un switch, provoquant ainsi une diffusion massive des trames réseau. Il comprend également la configuration de mécanismes de mitigation, tels que **Port Security**, pour protéger le réseau contre ce type d'attaque.
+
+---
+
 ## Topologie
 
 ![topo 1](/assets/macflood/topo_1.png)

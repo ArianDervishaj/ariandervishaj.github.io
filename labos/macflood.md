@@ -177,11 +177,11 @@ Pendant que `macof` tourne sur H5, effectuez un ping depuis H6 vers H7 :
 
 Pour protéger un réseau contre les attaques par MAC flooding, la fonctionnalité **Port Security** des switchs permet de limiter le nombre d'adresses MAC apprises sur un port et de définir des actions en cas de violation. L’ajout de logs permet de surveiller et détecter les tentatives d’attaque.
 #### Actions possibles 
-|**Mode**|**Description**|
-|---|---|
-|`protect`|Bloque les trames des adresses MAC non autorisées, sans log ni désactivation du port.|
-|`restrict`|Bloque les trames des adresses non autorisées et génère des logs.|
-|`shutdown`|Désactive complètement le port en cas de violation.|
+| **Mode**   | **Description**                                                                       |
+|------------|---------------------------------------------------------------------------------------|
+| `protect`  | Bloque les trames des adresses MAC non autorisées, sans log ni désactivation du port. |
+| `restrict` | Bloque les trames des adresses non autorisées et génère des logs.                     |
+| `shutdown` | Désactive complètement le port en cas de violation.                                   |
 ### Mise en place
 
 ![topo 2](/assets/macflood/topo_2.png)

@@ -1,5 +1,4 @@
 title: Arian Dervishaj
 description: Portfolio
-show_downloads: false
-theme: jekyll-theme-hacker
-#theme: jekyll-theme-cayman
+show_downloads: true
+theme: jekyll-theme-cayman

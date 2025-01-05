@@ -18,7 +18,7 @@ Ces projets ont été réalisés dans le cadre de ma formation académique, illu
 
 | Nom                                        | Compétences          | Description                                    | Liens                                   |
 |:-------------------------------------------|:---------------------|:-----------------------------------------------|:----------------------------------------|
-| Simulation d'un Système Solaire            | C, Lois de Newton    | Simulation graphique des orbites planétaires   | [](./projets/systeme-solaire.md)        |
+| Simulation d'un Système Solaire            | C, Lois de Newton    | Simulation graphique des orbites planétaires   | [Détails](./projets/systeme-solaire.md)        |
 | Simulation de lignes de champs électriques | C, Électromagnétisme | Visualisation des champs électriques           | [Détails](./projets/ligne-de-champs.md) |
 | Certifications                             | Sécurité, TLS        | Création et gestion de certificats pour HTTPS  | [Détails](./labos/cert.md)              |
 | Attaque Macflood                           | Réseaux, Sécurité    | Attaque Macflood et défense avec Port Security | [Détails](./labos/macflood.md)          |

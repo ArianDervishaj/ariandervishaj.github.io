@@ -6,8 +6,6 @@ layout: default
 
 [Retour à l'accueil](/)
 
-# Ajout du HTTPS à mes services auto-hébergés
-
 ## Objectif
 Permettre un accès sécurisé à mes services auto-hébergés via HTTPS, en simplifiant leur accès avec des noms de domaine personnalisés. Cette configuration fonctionne à la fois en local et via Tailscale.
 

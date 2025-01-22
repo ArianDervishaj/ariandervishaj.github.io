@@ -11,7 +11,7 @@ Permettre un accès sécurisé à mes services auto-hébergés via HTTPS, en sim
 
 ## Aperçu des outils utilisés
 
-- **Pi-hole** : Gère les noms de domaine locaux pour simplifier l'accès aux services via des noms faciles à retenir comme `jellyfin.local`.
+- **Pi-hole** : Gère les noms de domaine locaux pour simplifier l'accès aux services via des noms faciles à retenir comme `jellyfin.home`.
 - **Tailscale** : Fournit un réseau privé virtuel (VPN) pour accéder à vos services de manière sécurisée depuis l'extérieur.
 - **Caddy** : Agit comme un proxy inverse et gère automatiquement les certificats HTTPS pour sécuriser vos connexions.
 
@@ -52,6 +52,9 @@ Utiliser des noms de domaine locaux pour accéder aux services simplifie la navi
   - **Domain** : `jellyfin.home`
   **Target Domain** : `mediaserver.home`
 
+> **Explication**
+> Utiliser un enregistrement _CNAME_ permet de centraliser les modifications. Si l'adresse IP de votre serveur change, il vous suffit de mettre à jour le _CNAME_ au lieu de devoir modifier l'IP de chaque service individuellement.
+
 #### Ajout des DNS Tailscale :
 1. Dans **Pi-hole** > **Local DNS** > **DNS Records**, ajoutez un enregistrement A pour l’accès via Tailscale :
    - **Domaine** : `mediaserver.ts`  
@@ -63,7 +66,7 @@ Utiliser des noms de domaine locaux pour accéder aux services simplifie la navi
 
 > **Remarque**
 > - `[IP_LOCAL]` : Adresse IP locale de votre serveur (par exemple, `192.168.x.x`).
-- `[IP_TAILSCALE]` : Adresse IP attribuée par Tailscale (par exemple, `100.x.x.x`).
+>- `[IP_TAILSCALE]` : Adresse IP attribuée par Tailscale (par exemple, `100.x.x.x`).
 
 ---
 

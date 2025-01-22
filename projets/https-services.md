@@ -18,21 +18,21 @@ Permettre un accès sécurisé à mes services auto-hébergés via HTTPS, en sim
 ---
 
 ## Liste des services et ports
-Voici les services hébergés sur mon serveur, avec leurs ports respectifs :
+Voici les services hébergés sur mon serveur :
 
-| Service     | Port | Description                   |
-|-------------|------|-------------------------------|
-| Jellyfin    | 8096 | Serveur multimédia            |
-| Jellyseer   | 5055 | Gestionnaire de films         |
-| Filebrowser | 8080 | Navigateur de fichiers        |
-| qBittorrent | 8081 | Gestionnaire de torrents      |
-| Uptime Kuma | 3001 | Surveillance des applications |
-| Speedtest   | 8765 | Suivi de la vitesse internet  |
-| Portainer   | 9000 | Gestionnaire Docker           |
-| Sonarr      | 8989 | Gestionnaire de séries TV     |
-| Radarr      | 7878 | Gestionnaire de films         |
-| Bazarr      | 6767 | Gestionnaire de sous-titres   |
-| Prowlarr    | 9696 | Indexeur de fichiers médias   |
+| Service     | Description                   |
+|-------------|-------------------------------|
+| Jellyfin    | Serveur multimédia            |
+| Jellyseer   | Gestionnaire de films         |
+| Filebrowser | Navigateur de fichiers        |
+| qBittorrent | Gestionnaire de torrents      |
+| Uptime Kuma | Surveillance des applications |
+| Speedtest   | Suivi de la vitesse internet  |
+| Portainer   | Gestionnaire Docker           |
+| Sonarr      | Gestionnaire de séries TV     |
+| Radarr      | Gestionnaire de films         |
+| Bazarr      | Gestionnaire de sous-titres   |
+| Prowlarr    | Indexeur de fichiers médias   |
 
 ---
 
@@ -44,22 +44,22 @@ Utiliser des noms de domaine locaux pour accéder aux services simplifie la navi
 ### Étapes :
 
 #### Ajout des DNS locaux :
-1. Dans **Pi-hole** > **Local DNS** > **DNS Records**, ajoutez un enregistrement pour chaque service :
-   - **Domaine** : `jellyfin.local`  
-     **IP** : `[IP_LOCAL]`  
-   - **Domaine** : `jellyseer.local`  
+1. Dans **Pi-hole** > **Local DNS** > **DNS Records**, ajoutez un enregistrement A :
+   - **Domaine** : `mediaserver.home`  
      **IP** : `[IP_LOCAL]`  
 
-2. Répétez l'opération pour tous les services, en utilisant leur port par défaut et l’IP locale de votre serveur.
+2. Dans **Pi-hole** > **Local DNS** > **CNAME Records**, ajoutez un enregistrement pour chaque service:
+  - **Domain** : `jellyfin.home`
+  **Target Domain** : `mediaserver.home`
 
 #### Ajout des DNS Tailscale :
-1. Dans **Pi-hole** > **Local DNS** > **DNS Records**, ajoutez un enregistrement DNS pour l’accès via Tailscale :
-   - **Domaine** : `jellyfin.ts`  
+1. Dans **Pi-hole** > **Local DNS** > **DNS Records**, ajoutez un enregistrement A pour l’accès via Tailscale :
+   - **Domaine** : `mediaserver.ts`  
      **IP** : `[IP_TAILSCALE]`  
-   - **Domaine** : `jellyseer.ts`  
-     **IP** : `[IP_TAILSCALE]`  
-
-2. Répétez cette étape pour chaque service.
+   
+2. Dans **Pi-hole** > **Local DNS** > **CNAME Records**, ajoutez un enregistrement pour chaque service:
+  - **Domain** : `jellyfin.ts`
+  **Target Domain** : `mediaserver.ts`
 
 > **Remarque**
 > - `[IP_LOCAL]` : Adresse IP locale de votre serveur (par exemple, `192.168.x.x`).
@@ -94,13 +94,13 @@ caddy:
 #### Modifier le fichier `Caddyfile`
 
 ```bash
-jellyfin.local {
-    reverse_proxy [IP_LOCAL]:8096
+jellyfin.home {
+    reverse_proxy [IP_LOCAL]:[PORT_JELLYFIN]
     tls internal
 }
 
 jellyfin.ts {
-    reverse_proxy [IP_TAILSCALE]:8096
+    reverse_proxy [IP_TAILSCALE]:[PORT_JELLYFIN]
     tls internal
 }
 ```
@@ -137,6 +137,6 @@ Caddy génère un certificat racine auto-signé pour les connexions HTTPS. L’i
 ## Bilan
 
 Avec cette configuration :
-- Tous les services sont accessibles via des noms de domaine personnalisés en local (`.local`) et via Tailscale (`.ts`).
+- Tous les services sont accessibles via des noms de domaine personnalisés en local (`.home`) et via Tailscale (`.ts`).
 - Les connexions sont sécurisées avec HTTPS, grâce à Caddy.
 - Pi-hole agit comme serveur DNS principal, simplifiant la gestion des noms de domaine.

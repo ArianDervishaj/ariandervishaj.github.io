@@ -1,5 +1,5 @@
 ---
-title: Ajout du HTTPS à mes services auto-hébergés
+title: Mise en place de HTTPS pour mes services
 description: Guide complet pour configurer HTTPS avec Pi-hole, Tailscale, et Caddy sur des services auto-hébergés.
 layout: default
 ---

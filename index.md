@@ -7,10 +7,10 @@ layout: default
 
 Ces projets ont été réalisés par initiative personnelle pour répondre à des besoins spécifiques ou approfondir mes compétences en autodidacte.
 
-| Nom                           | Compétences                                    | Description                                             | Liens                                     |
-| :---------------------------- | :--------------------------------------------- | :------------------------------------------------------ | :---------------------------------------- |
-| Nuggets Of Wisdom             | Javascript, SvelteKit, Base de donnée, Panzoom | Plateforme web pour afficher des notes de cours SVG     | [Détails](./projets/nuggets-of-wisdom.md) |
-| Ajout du HTTPS à des services | Réseaux, Sécurité, Docker                      | Configuration de HTTPS avec Pi-hole, Caddy et Tailscale | [Détails](./projets/https-services.md)    |
+| Nom                                      | Compétences                                    | Description                                             | Liens                                     |
+| :--------------------------------------- | :--------------------------------------------- | :------------------------------------------------------ | :---------------------------------------- |
+| Nuggets Of Wisdom                        | Javascript, SvelteKit, Base de donnée, Panzoom | Plateforme web pour afficher des notes de cours SVG     | [Détails](./projets/nuggets-of-wisdom.md) |
+| Mise en place de HTTPS pour mes services | Réseaux, Sécurité, Docker                      | Configuration de HTTPS avec Pi-hole, Caddy et Tailscale | [Détails](./projets/https-services.md)    |
 
 ## Projets Académiques
 

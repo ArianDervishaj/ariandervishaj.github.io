@@ -2,3 +2,17 @@ title: Arian Dervishaj
 description: Portfolio
 show_downloads: false
 theme: jekyll-theme-cayman
+
+# Multi-language settings
+languages: ["fr", "en"]
+default_lang: "fr"
+exclude_from_localizations:
+  - assets
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+language_data: lang.yml
+
+plugins:
+  - jekyll-multiple-languages-plugin

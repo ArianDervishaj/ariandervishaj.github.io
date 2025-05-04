@@ -1,0 +1,162 @@
+global:
+  details: "Détails"
+  home: "Accueil"
+  french: "Français"
+  english: "English"
+  back: "Retour à l'accueil"
+  back_link: "/"
+
+## ------------------------------------------ INDEX -------------------------------------
+index:
+  title: "Arian Dervishaj"
+  projets_perso_titre: "Projets personnels"
+  projets_perso_desc: "Ces projets ont été réalisés à titre personnel afin de répondre à des besoins spécifiques ou d’approfondir mes compétences en autodidacte."
+  projets_acad_titre: "Projets académiques"
+  projets_acad_desc: "Ces projets ont été réalisés dans le cadre de ma formation académique, illustrant l'application de concepts théoriques à des cas pratiques."
+
+  # Titres des colonnes génériques
+  nom: "Nom"
+  competences: "Compétences"
+  description: "Description"
+  liens: "Liens"
+
+  # Projets personnels
+  nuggets_nom: "Nuggets Of Wisdom"
+  nuggets_competences: "JavaScript, SvelteKit, Base de données, Panzoom"
+  nuggets_description: "Plateforme web permettant d’afficher des notes de cours au format SVG."
+
+  https_nom: "Mise en place de HTTPS pour mes services"
+  https_competences: "Réseaux, Sécurité, Docker"
+  https_description: "Configuration du HTTPS avec Pi-hole, Caddy et Tailscale."
+
+  # Projets académiques
+  solaire_nom: "Simulation d’un système solaire"
+  solaire_competences: "C, Lois de Newton"
+  solaire_description: "Simulation graphique des orbites planétaires."
+
+  lignes_nom: "Simulation de lignes de champ électrique"
+  lignes_competences: "C, Électromagnétisme"
+  lignes_description: "Visualisation de champs électriques."
+
+  cert_nom: "Certifications"
+  cert_competences: "Sécurité, TLS"
+  cert_description: "Création et gestion de certificats pour HTTPS."
+
+  macflood_nom: "Attaque MacFlood"
+  macflood_competences: "Réseaux, Sécurité"
+  macflood_description: "Simulation d’une attaque MacFlood et mise en place de défenses via Port Security."
+
+  # Section compétences
+  competences_titre: "Compétences"
+  techniques: "Techniques"
+  languages: "Langages de programmation"
+  languages_list: "C, Java, Python, HTML/CSS, JavaScript"
+  tools: "Outils"
+  tools_list: "Git, Docker"
+  domains: "Domaines"
+  domains_list: "Réseaux (notions de base et configuration), Programmation orientée objet et concurrente"
+
+  soft_skills: "Compétences interpersonnelles"
+  spoken_languages: "Langues parlées"
+  spoken_languages_list: "Français (natif), Anglais (B2/C1), Albanais (natif)"
+  personal_qualities: "Qualités personnelles"
+  personal_qualities_list: "Curiosité, autonomie, pédagogie, esprit de collaboration"
+
+## ------------------------------ PROJETS ------------------------ ##
+
+ligne_de_champs:
+  title: Simulation de lignes de champ électrique en C
+  explication: >
+    Ce programme simule les lignes de champ électrique à l’aide du langage C.<br>
+    Il calcule les champs électriques générés par des charges positives et négatives, puis trace les lignes de champ correspondantes.<br>
+    Cette simulation permet de visualiser le comportement du champ électrique dans des configurations complexes.
+  features_title: "Fonctionnalités"
+  features:
+    - "Prise en charge de charges positives et négatives."
+    - "Calcul dynamique des champs électriques résultants."
+    - "Génération graphique des lignes de champ."
+  screenshots:
+    - title: "Simulation avec 10 charges positives, 10 charges négatives et 50 lignes de champ"
+      image: "/assets/lignes-de-champs/image.png"
+    - title: "Simulation avec 100 charges positives, 100 charges négatives et 5000 lignes de champ"
+      image: "/assets/lignes-de-champs/image-1.png"
+    - title: "Simulation avec 5 charges positives, 10 charges négatives et 500 lignes de champ"
+      image: "/assets/lignes-de-champs/image-2.png"
+  run_title: "Exécuter le programme"
+  run_intro: "Pour lancer la simulation, suivez les étapes ci-dessous :"
+  run_steps:
+    - "**Prérequis** : assurez-vous d’avoir un compilateur C (comme `gcc`) et `make` installés."
+    - "**Cloner le dépôt** :"
+    - "**Compiler et exécuter** :"
+  run_clone: git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
+  run_build:
+    - "cd simulation-lignes-de-champs"
+    - "make main"
+    - "./main <nombre_de_charges_positives> <nombre_de_charges_négatives> <nombre_de_lignes_de_champ>"
+  more_title: "En voir plus"
+  github_link: "Voir le dépôt GitHub"
+
+systeme_solaire:
+  title: Simulation d'un Système Solaire en C
+  explanation: >
+    Ce projet a été réalisé dans le cadre du cours de physique à l'HEPIA.<br>
+    Il applique les lois de Newton pour simuler un système planétaire, permettant d'explorer les interactions gravitationnelles entre une étoile centrale et plusieurs planètes.<br><br>
+    Cette simulation met en pratique des concepts de physique et de programmation pour visualiser les dynamiques orbitales de manière réaliste.
+  features_title: "Fonctionnalités"
+  features:
+    - "Simulation en temps réel des orbites planétaires."
+    - "Calcul précis des interactions gravitationnelles selon les lois de Newton."
+    - "Visualisation graphique simple et efficace."
+  screenshots:
+    - title: "Simulation en action"
+      image: "/assets/systeme-solaire/image.png"
+  run_title: "Exécuter le programme"
+  run_intro: "Pour lancer la simulation, suivez les étapes ci-dessous :"
+  run_steps:
+    - "**Pré-requis** : Assurez-vous d'avoir un compilateur C (comme `gcc`) et `make` installés."
+    - "**Cloner le dépôt** :"
+    - "**Compiler et exécuter** :"
+  run_clone: git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
+  run_build:
+    - "cd simulation-systeme-solaire"
+    - "make main"
+    - "./main"
+  more_title: "En savoir plus"
+  github_link: "Voir le dépôt GitHub"
+
+https:
+  title: Mise en place de HTTPS pour mes services
+  goal_title: Objectif
+  goal: 
+    Permettre un accès sécurisé à mes services auto-hébergés via HTTPS, en simplifiant leur accès avec des noms de domaine personnalisés.<br>
+    Cette configuration fonctionne à la fois en local et via Tailscale.
+  tools_title: Aperçu des outils utilisés
+  tools:
+    - "<b>Pi-hole</b> : Gère les noms de domaine locaux pour simplifier l'accès aux services via des noms faciles à retenir comme <i>jellyfin.home</i>."
+    - "<b>Tailscale</b> : Fournit un réseau privé virtuel (VPN) pour accéder à vos services de manière sécurisée depuis l'extérieur."
+    - "<b>Caddy</b> : Agit comme un proxy inverse et gère automatiquement les certificats HTTPS pour sécuriser vos connexions."
+  service_title: Liste des services
+  service_text: "Voici les services hébergés sur mon serveur :"
+  services:
+  - name: Jellyfin
+    description: Serveur multimédia v3
+  - name: Jellyseer
+    description: Gestionnaire de films
+  - name: Filebrowser
+    description: Navigateur de fichiers
+  - name: qBittorrent
+    description: Gestionnaire de torrents
+  - name: Uptime Kuma
+    description: Surveillance des applications
+  - name: Speedtest
+    description: Suivi de la vitesse internet
+  - name: Portainer
+    description: Gestionnaire Docker
+  - name: Sonarr
+    description: Gestionnaire de séries TV
+  - name: Radarr
+    description: Gestionnaire de films
+  - name: Bazarr
+    description: Gestionnaire de sous-titres
+  - name: Prowlarr
+    description: Indexeur de fichiers médias

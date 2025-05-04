@@ -1,38 +1,34 @@
 ---
-title: Mise en place de HTTPS pour mes services
-description: Guide complet pour configurer HTTPS avec Pi-hole, Tailscale, et Caddy sur des services auto-hébergés.
 layout: default
 ---
 
-[Retour à l'accueil](/)
+[{% t global.back %}]({% t global.back_link %})
 
-## Objectif
-Permettre un accès sécurisé à mes services auto-hébergés via HTTPS, en simplifiant leur accès avec des noms de domaine personnalisés. Cette configuration fonctionne à la fois en local et via Tailscale.
+# {% t https.title %}
 
-## Aperçu des outils utilisés
 
-- **Pi-hole** : Gère les noms de domaine locaux pour simplifier l'accès aux services via des noms faciles à retenir comme `jellyfin.home`.
-- **Tailscale** : Fournit un réseau privé virtuel (VPN) pour accéder à vos services de manière sécurisée depuis l'extérieur.
-- **Caddy** : Agit comme un proxy inverse et gère automatiquement les certificats HTTPS pour sécuriser vos connexions.
+## {% t https.goal_title %}
+{% t https.goal %}
+
+## {% t https.tools_title %}
+
+<ul>
+  {% for item in site.translations[site.lang].https.tools %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
 
 ---
 
-## Liste des services et ports
-Voici les services hébergés sur mon serveur :
+## {% t https.service_title %}
 
-| Service     | Description                   |
-|-------------|-------------------------------|
-| Jellyfin    | Serveur multimédia            |
-| Jellyseer   | Gestionnaire de films         |
-| Filebrowser | Navigateur de fichiers        |
-| qBittorrent | Gestionnaire de torrents      |
-| Uptime Kuma | Surveillance des applications |
-| Speedtest   | Suivi de la vitesse internet  |
-| Portainer   | Gestionnaire Docker           |
-| Sonarr      | Gestionnaire de séries TV     |
-| Radarr      | Gestionnaire de films         |
-| Bazarr      | Gestionnaire de sous-titres   |
-| Prowlarr    | Indexeur de fichiers médias   |
+{% t https.service_text %}
+
+{% for service in site.translations[site.lang].https.services %}
+<b>{{ service.name }}</b><br>
+{{ service.description }}
+{% endfor %}
+
 
 ---
 

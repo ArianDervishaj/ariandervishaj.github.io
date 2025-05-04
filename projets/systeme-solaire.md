@@ -1,52 +1,58 @@
 ---
-title: Simulation d'un Système Solaire en C
-description: Simulation d'un système planétaire utilisant les lois de Newton en C.
 layout: default
 ---
 
-[Retour à l'accueil](/)
+[{% t global.back %}]({% t global.back_link %})
 
-Ce projet a été réalisé dans le cadre du cours de physique à l'HEPIA.  
-Il applique les lois de Newton pour simuler un système planétaire, permettant d'explorer les interactions gravitationnelles entre une étoile centrale et plusieurs planètes.  
+# {% t systeme_solaire.title %}
 
-Cette simulation met en pratique des concepts de physique et de programmation pour visualiser les dynamiques orbitales de manière réaliste.
+{% t systeme_solaire.explanation %}
 
 ---
 
-### Fonctionnalités
 
-- Simulation en temps réel des orbites planétaires.
-- Calcul précis des interactions gravitationnelles selon les lois de Newton.
-- Visualisation graphique simple et efficace.
+
+### {% t systeme_solaire.features_title %}
+
+<ul>
+  {% for item in site.translations[site.lang].systeme_solaire.features %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
 
 ---
 
 ### Screenshots
 
-Voici une capture d'écran illustrant la simulation en action :
+{% for shot in site.translations[site.lang].systeme_solaire.screenshots %}
 
-![Image du système solaire](/assets/systeme-solaire/image.png)
+#### {{ shot.title }}
 
----
+![{{ shot.title }}]({{ shot.image }})
+{% endfor %}
 
-### Exécuter le programme
-
-Pour lancer la simulation, suivez les étapes ci-dessous :
-
-1. **Pré-requis** : Assurez-vous d'avoir un compilateur C (comme `gcc`) et `make` installés.
-2. **Cloner le dépôt** :
-    ```bash
-    git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
-    ```
-3. **Compiler et éxecuter** :
-    ```bash
-    cd simulation-systeme-solaire
-    make main
-    ./main
-    ```
 
 ---
 
-### En savoir plus
+### {% t systeme_solaire.run_title %}
 
-[Voir le dépôt GitHub](https://github.com/ArianDervishaj/simulation-systeme-solaire)
+{% t systeme_solaire.run_intro %}
+
+1. {{ site.translations[site.lang].systeme_solaire.run_steps[0] }}
+2. {{ site.translations[site.lang].systeme_solaire.run_steps[1] }}
+    ```bash
+    {{ site.translations[site.lang].systeme_solaire.run_clone }}
+    ```
+3. {{ site.translations[site.lang].systeme_solaire.run_steps[2] }}
+    ```bash
+    {{ site.translations[site.lang].systeme_solaire.run_build[0] }}
+    {{ site.translations[site.lang].systeme_solaire.run_build[1] }}
+    {{ site.translations[site.lang].systeme_solaire.run_build[2] }}
+    ```
+
+
+---
+
+### {% t systeme_solaire.more_title %}
+
+[{% t systeme_solaire.github_link %}](https://github.com/ArianDervishaj/simulation-systeme-solaire)

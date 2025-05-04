@@ -1,59 +1,52 @@
 ---
-title: Simulation de lignes de champs électriques en C
-description: Simulation graphique des lignes de champs électriques générées par des charges positives et négatives.
 layout: default
 ---
 
-[Retour à l'accueil](/)
+[{% t global.back %}]({% t global.back_link %})
 
-Ce programme simule les lignes de champs électriques en utilisant le langage C.  
-Il calcule les champs électriques générés par des charges positives et négatives et trace leurs lignes de champ correspondantes. Cette simulation permet de visualiser le comportement du champ électrique dans des configurations complexes.
+# {% t ligne_de_champs.title %}
+
+{% t  ligne_de_champs.explication %}
 
 ---
 
-### Fonctionnalités
+### {% t ligne_de_champs.features_title %}
 
-- Prise en charge de charges positives et négatives.
-- Calcul dynamique des champs électriques résultants.
-- Génération graphique des lignes de champs.
-
+<ul>
+  {% for item in site.translations[site.lang].ligne_de_champs.features %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
 ---
 
 ### Screenshots
 
-#### Simulation avec 10 charges positives, 10 charges négatives et 50 lignes de champs
+{% for shot in site.translations[site.lang].ligne_de_champs.screenshots %}
 
-![Simulation avec 10 charges positives, 10 charges négatives et 50 lignes de champs](/assets/lignes-de-champs/image.png)
+#### {{ shot.title }}
 
-#### Simulation avec 100 charges positives, 100 charges négatives et 5000 lignes de champs
-
-![Simulation avec 100 charges positives, 100 charges négatives et 5000 lignes de champs](/assets/lignes-de-champs/image-1.png)
-
-#### Simulation avec 5 charges positives, 10 charges négatives et 500 lignes de champs
-
-![Simulation avec 5 charges positives, 10 charges négatives et 500 lignes de champs](/assets/lignes-de-champs/image-2.png)
-
+![{{ shot.title }}]({{ shot.image }})
+{% endfor %}
 ---
 
-### Exécuter le programme
+### {% t ligne_de_champs.run_title %}
 
-Pour lancer la simulation, suivez les étapes ci-dessous :
+{% t ligne_de_champs.run_intro %}
 
-1. **Pré-requis** : Assurez-vous d'avoir un compilateur C (comme `gcc`) et `make` installés.
-2. **Cloner le dépôt** :
+1. {{ site.translations[site.lang].ligne_de_champs.run_steps[0] }}
+2. {{ site.translations[site.lang].ligne_de_champs.run_steps[1] }}
     ```bash
-    git clone https://github.com/ArianDervishaj/simulation-systeme-solaire.git
+    {{ site.translations[site.lang].ligne_de_champs.run_clone }}
     ```
-3. **Compiler et éxecuter** :
-
+3. {{ site.translations[site.lang].ligne_de_champs.run_steps[2] }}
     ```bash
-    cd simulation-lignes-de-champs
-    make main
-    ./main <nombre_de_charges_positives> <nombre_de_charges_négatives> <nombre_de_lignes_de_champ>
+    {{ site.translations[site.lang].ligne_de_champs.run_build[0] }}
+    {{ site.translations[site.lang].ligne_de_champs.run_build[1] }}
+    {{ site.translations[site.lang].ligne_de_champs.run_build[2] }}
     ```
 
 ---
 
-### En voir plus
+### {% t ligne_de_champs.more_title %}
 
-[Voir le dépôt GitHub](https://github.com/ArianDervishaj/simulation-lignes-de-champs)
+[{% t ligne_de_champs.github_link %}](https://github.com/ArianDervishaj/simulation-lignes-de-champs)

@@ -1,0 +1,15 @@
+fr:
+  details: "Détails"
+  home: "Accueil"
+  langcode: "fr"
+  langname: "Français"
+  otherlang: "English"
+  otherlangcode: "en"
+
+en:
+  details: "Details"
+  home: "Home"
+  langcode: "en"
+  langname: "English"
+  otherlang: "Français"
+  otherlangcode: "fr"

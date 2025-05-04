@@ -2,4 +2,8 @@
 
 source "https://rubygems.org"
 
-gemspec
+gem "jekyll"
+gem "jekyll-theme-cayman"
+gem "jekyll-multiple-languages-plugin"
+
+#gemspec

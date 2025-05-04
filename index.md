@@ -1,39 +1,34 @@
 ---
-title: Arian Dervishaj
 layout: default
 ---
 
-## Projets Personnels
+## {% t index.projets_perso_titre %}
+{% t index.projets_perso_desc %}
 
-Ces projets ont été réalisés par initiative personnelle pour répondre à des besoins spécifiques ou approfondir mes compétences en autodidacte.
+| {% t index.nom %}         | {% t index.competences %}         | {% t index.description %}         | {% t index.liens %}                                        |
+| :------------------------ | :-------------------------------- | :-------------------------------- | :--------------------------------------------------------- |
+| {% t index.nuggets_nom %} | {% t index.nuggets_competences %} | {% t index.nuggets_description %} | [{% t global.details %}](./projets/nuggets-of-wisdom.html) |
+| {% t index.https_nom %}   | {% t index.https_competences %}   | {% t index.https_description %}   | [{% t global.details %}](./projets/https-services.html)    |
 
-| Nom                                      | Compétences                                    | Description                                             | Liens                                     |
-| :--------------------------------------- | :--------------------------------------------- | :------------------------------------------------------ | :---------------------------------------- |
-| Nuggets Of Wisdom                        | Javascript, SvelteKit, Base de donnée, Panzoom | Plateforme web pour afficher des notes de cours SVG     | [Détails](./projets/nuggets-of-wisdom.md) |
-| Mise en place de HTTPS pour mes services | Réseaux, Sécurité, Docker                      | Configuration de HTTPS avec Pi-hole, Caddy et Tailscale | [Détails](./projets/https-services.md)    |
+## {% t index.projets_acad_titre %}
+{% t index.projets_acad_desc %}
 
-## Projets Académiques
-
-Ces projets ont été réalisés dans le cadre de ma formation académique, illustrant l’application de concepts théoriques à des cas pratiques.
-
-| Nom                                        | Compétences          | Description                                    | Liens                                   |
-| :----------------------------------------- | :------------------- | :--------------------------------------------- | :-------------------------------------- |
-| Simulation d'un Système Solaire            | C, Lois de Newton    | Simulation graphique des orbites planétaires   | [Détails](./projets/systeme-solaire.md) |
-| Simulation de lignes de champs électriques | C, Électromagnétisme | Visualisation des champs électriques           | [Détails](./projets/ligne-de-champs.md) |
-| Certifications                             | Sécurité, TLS        | Création et gestion de certificats pour HTTPS  | [Détails](./labos/cert.md)              |
-| Attaque Macflood                           | Réseaux, Sécurité    | Attaque Macflood et défense avec Port Security | [Détails](./labos/macflood.md)          |
+| {% t index.nom %}          | {% t index.competences %}          | {% t index.description %}          | {% t index.liens %}                                      |
+| :------------------------- | :--------------------------------- | :--------------------------------- | :------------------------------------------------------- |
+| {% t index.solaire_nom %}  | {% t index.solaire_competences %}  | {% t index.solaire_description %}  | [{% t global.details %}](./projets/systeme-solaire.html) |
+| {% t index.lignes_nom %}   | {% t index.lignes_competences %}   | {% t index.lignes_description %}   | [{% t global.details %}](./projets/ligne-de-champs.html) |
+| {% t index.cert_nom %}     | {% t index.cert_competences %}     | {% t index.cert_description %}     | [{% t global.details %}](./labos/cert.html)              |
+| {% t index.macflood_nom %} | {% t index.macflood_competences %} | {% t index.macflood_description %} | [{% t global.details %}](./labos/macflood.html)          |
 
 ---
 
-## Compétences
+## {% t index.competences_titre %}
 
-### Techniques
+### {% t index.techniques %}
+- **{% t index.languages %}** : {% t index.languages_list %}
+- **{% t index.tools %}** : {% t index.tools_list %}
+- **{% t index.domains %}** : {% t index.domains_list %}
 
-- **Langages de programmation** : C, Java, Python, HTML/CSS, JavaScript
-- **Outils** : Git, Docker
-- **Domaines** : Réseaux (bases et configurations), Programmation orientée objet et concurrente
-
-### Soft Skills
-
-- **Langues parlées** : Français (natif), Anglais (B2/C1), Albanais (natif)
-- **Qualités personnelles** : Curiosité, autonomie, pédagogie, collaboration
+### {% t index.soft_skills %}
+- **{% t index.spoken_languages %}** : {% t index.spoken_languages_list %}
+- **{% t index.personal_qualities %}** : {% t index.personal_qualities_list %}
